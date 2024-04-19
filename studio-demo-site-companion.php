@@ -21,7 +21,7 @@ function studio_companion_admin_notices() {
 		<p class="studio_welcome">
 			<?php echo sprintf(
 			/* translators: %s: URL to Studio landing page. */
-				__( 'This preview site will be <b>deleted in 7 days from the last update</b>. <a href="%s">Try Studio by WordPress.com ↗</a>' ),
+				__( 'This demo site will be <b>deleted in 7 days from the last update</b>. <a target="_blank" href="%s">Try Studio by WordPress.com ↗</a>' ),
 				'https://developer.wordpress.com/studio/'
 			); ?>
 		</p>
@@ -34,6 +34,15 @@ function studio_companion_admin_notices() {
         .studio_welcome {
             align-items: center;
         }
+
+		.studio_welcome a {
+			color: #3858E9;
+			text-decoration: none;
+		}
+
+		.studio_welcome a:hover {
+			text-decoration: underline;
+		}
 	</style>
 	<?php
 }
