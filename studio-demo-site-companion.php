@@ -7,8 +7,6 @@ Version: 1.0
 Author: Automattic
 */
 
-add_action( 'admin_notices', 'studio_companion_admin_notices' );
-
 function studio_companion_admin_notices() {
 	if ( function_exists( 'get_current_screen' ) ) {
 		$screen = get_current_screen();
@@ -26,14 +24,27 @@ function studio_companion_admin_notices() {
 			); ?>
 		</p>
 	</div>
-	<style>
-        .studio_notice {
-            border-left-color: #F0B849;
-        }
-
-        .studio_welcome {
-            align-items: center;
-        }
-	</style>
 	<?php
 }
+add_action( 'admin_notices', 'studio_companion_admin_notices' );
+
+function studio_companion_admin_enqueue_scripts() {
+	wp_enqueue_style( 'studio-companion', plugin_dir_url( __FILE__ ) . 'assets/style-admin.css' );
+}
+add_action( 'admin_enqueue_scripts', 'studio_companion_admin_enqueue_scripts' );
+
+function studio_companion_enqueue_scripts() {
+	wp_enqueue_style( 'studio-companion', plugin_dir_url( __FILE__ ) . 'assets/style.css' );
+	wp_enqueue_script( 'studio-companion', plugin_dir_url( __FILE__ ) . 'assets/index.js', array( ), '1.0', true );
+	wp_localize_script( 'studio-companion', 'studioCompanionNotice', array(
+		'description' => __( "You're previewing a <b>WP Build</b> site." ),
+		'linkText' => esc_html__( "Try WP Build ↗" ),
+		'linkUrl' => 'https://developer.wordpress.com/studio/',
+		'images' => array(
+			'logo' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/wpcom-logo.svg' ),
+			'externalArrow' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/external-arrow.svg' ),
+			'close' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/close.svg' ),
+		),
+	) );
+}
+add_action( 'wp_enqueue_scripts', 'studio_companion_enqueue_scripts' );
