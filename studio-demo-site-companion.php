@@ -37,7 +37,7 @@ function studio_companion_enqueue_scripts() {
 	wp_enqueue_style( 'studio-companion', plugin_dir_url( __FILE__ ) . 'assets/style.css' );
 	wp_enqueue_script( 'studio-companion', plugin_dir_url( __FILE__ ) . 'assets/index.js', array( ), '1.0', true );
 	wp_localize_script( 'studio-companion', 'studioCompanionNotice', array(
-		'description' => __( "You're previewing a <b>Studio</b> site." ),
+		'description' => __( "You're previewing a <b>Studio</b> demo site." ),
 		'linkText' => esc_html__( "Try Studio by WordPress.com ↗" ),
 		'linkUrl' => 'https://developer.wordpress.com/studio/',
 		'images' => array(
