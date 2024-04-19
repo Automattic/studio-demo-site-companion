@@ -5,3 +5,12 @@
 .studio_welcome {
     align-items: center;
 }
+
+.studio_welcome a {
+    color: #3858E9;
+    text-decoration: none;
+}
+
+.studio_welcome a:hover {
+    text-decoration: underline;
+}
