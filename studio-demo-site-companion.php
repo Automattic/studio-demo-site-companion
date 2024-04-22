@@ -44,17 +44,7 @@ function studio_companion_admin_notices() {
 add_action( 'admin_notices', 'studio_companion_admin_notices' );
 
 function studio_companion_enqueue_scripts() {
-	wp_add_inline_script( 'studio-companion', 'const studioCompanionNotice =' . json_encode(array(
-		'description' => __( "You're previewing a <b>Studio</b> demo site." ),
-		'linkText' => esc_html__( "Try Studio by WordPress.com ↗" ),
-		'linkUrl' => 'https://developer.wordpress.com/studio/',
-		'images' => array(
-			'logo' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/wpcom-logo.svg' ),
-			'externalArrow' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/external-arrow.svg' ),
-			'close' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/close.svg' ),
-		),
-	)) );
-	?>
+?>
     <style>
         #studio-companion-notice {
             padding: 2px 32px;
