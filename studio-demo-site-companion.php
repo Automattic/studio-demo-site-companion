@@ -20,7 +20,7 @@ function studio_companion_admin_notices() {
 			<?php echo sprintf(
 			/* translators: %s: URL to Studio landing page. */
 				__( 'This demo site will be <b>deleted in 7 days from the last update</b>. <a target="_blank" href="%s">Try Studio by WordPress.com ↗</a>' ),
-				'https://developer.wordpress.com/studio/'
+				'https://developer.wordpress.com/studio/?utm_source=studio_demo_site&utm_medium=referral&utm_campaign=demo_sites_backend'
 			); ?>
 		</p>
 	</div>
@@ -88,7 +88,7 @@ function studio_companion_enqueue_scripts() {
             var studioCompanionNotice = <?php echo json_encode(array(
             'description' => __( "You're previewing a <b>Studio</b> demo site." ),
             'linkText' => esc_html__( "Try Studio by WordPress.com ↗" ),
-            'linkUrl' => 'https://developer.wordpress.com/studio/',
+            'linkUrl' => 'https://developer.wordpress.com/studio/?utm_source=studio_demo_site&utm_medium=referral&utm_campaign=demo_sites_frontend',
             'images' => array(
                 'logo' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/wpcom-logo.svg' ),
                 'externalArrow' => esc_url( plugin_dir_url( __FILE__ ) . 'assets/external-arrow.svg' ),
