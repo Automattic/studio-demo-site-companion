@@ -53,13 +53,19 @@ function studio_companion_enqueue_scripts() {
             align-items: center;
             display: flex;
             gap: 8px;
-            font-family: 'Inter', '-apple-system', sans-serif;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+            font-size: 14px;
         }
 
         #studio-companion-notice a {
             margin-left: 12px;
             color: #FFFFFF;
             text-underline-offset: 4px;
+            text-decoration: underline;
+        }
+
+        #studio-companion-notice a:hover {
+            text-decoration: none;
         }
 
         #studio-companion-notice__close {
@@ -68,6 +74,8 @@ function studio_companion_enqueue_scripts() {
             background: none;
             border: none;
             appearance: none;
+            display: flex;
+            align-items: center;
         }
 
         #studio-companion-notice__close:hover {
