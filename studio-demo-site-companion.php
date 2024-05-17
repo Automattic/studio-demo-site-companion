@@ -63,6 +63,10 @@ function studio_companion_enqueue_scripts() {
             text-decoration: none;
         }
 
+        #studio-companion-notice p {
+            margin: 0;
+        }
+
         #studio-companion-notice__close {
             margin-left: auto;
             cursor: pointer;
