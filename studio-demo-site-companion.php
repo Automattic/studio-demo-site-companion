@@ -59,6 +59,10 @@ function studio_companion_enqueue_scripts() {
             text-decoration: underline;
         }
 
+        #studio-companion-notice p {
+            margin: 0;
+        }
+
         #studio-companion-notice a:hover {
             text-decoration: none;
         }
