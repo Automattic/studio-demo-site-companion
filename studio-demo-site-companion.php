@@ -64,7 +64,7 @@ function studio_companion_enqueue_scripts() {
         }
 
         #studio-companion-notice p {
-            margin: 0;
+            margin: 14px 0;
         }
 
         #studio-companion-notice__close {
