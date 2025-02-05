@@ -120,3 +120,6 @@ function studio_companion_enqueue_scripts() {
 <?php
 }
 add_action( 'wp_enqueue_scripts', 'studio_companion_enqueue_scripts' );
+
+// Enable Jetpack Offline mode to avoid collision with production sites
+add_filter( 'jetpack_offline_mode', '__return_true' );
