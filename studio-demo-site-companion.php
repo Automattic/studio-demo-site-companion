@@ -17,7 +17,7 @@ function studio_companion_admin_notices() {
 	?>
 	<div class="notice notice-warning is-dismissible studio_notice">
 		<p class="studio_welcome">
-			<?php echo __( 'This demo site will be <b>deleted in 7 days from the last update</b>.' ); ?>
+			<?php echo __( 'This preview site will be <b>deleted in 7 days from the last update</b>.' ); ?>
 		</p>
 	</div>
     <style>
@@ -87,7 +87,7 @@ function studio_companion_enqueue_scripts() {
             var studioCompanionNotice = <?php echo json_encode(array(
             'description' => sprintf(
                 /* translators: %s: URL to WordPress.com hosting landing page. */
-                __( 'You\'re previewing a <b>Studio</b> demo site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>' ),
+                __( 'This is a <b>Studio</b> preview site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>' ),
                 'https://wordpress.com/hosting/?utm_source=studio_demo_site&utm_medium=referral&utm_campaign=demo_sites_frontend'
             ),
         )); ?>;
