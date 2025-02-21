@@ -5,6 +5,8 @@ Plugin URI: https://github.com/Automattic/studio-demo-site-companion
 Description: Helps keep the Studio demo sites in order.
 Version: 1.0
 Author: Automattic
+Text Domain: studio-companion-plugin
+Domain Path: /languages
 */
 
 function studio_companion_admin_notices() {
