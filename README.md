@@ -5,4 +5,4 @@ It's a mu-plugin loaded in a single file at the moment of provisioning a demo si
 
 ## Localization
 
-See [Localization](./localization.md) documentation.
+See [Localization](./docs/localization.md) documentation.

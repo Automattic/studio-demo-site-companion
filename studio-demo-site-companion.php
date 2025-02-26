@@ -1,13 +1,13 @@
 <?php
-/*
-Plugin Name: Studio Demo Site Companion Plugin
-Plugin URI: https://github.com/Automattic/studio-demo-site-companion
-Description: Helps keep the Studio demo sites in order.
-Version: 1.0
-Author: Automattic
-Text Domain: studio-companion-plugin
-Domain Path: /languages
-*/
+/**
+ * Plugin Name: Studio Demo Site Companion Plugin
+ * Plugin URI: https://github.com/Automattic/studio-demo-site-companion
+ * Description: Helps keep the Studio demo sites in order.
+ * Version: 1.0
+ * Author: Automattic
+ * Text Domain: studio-companion-plugin
+ * Domain Path: /languages
+ */
 
 function studio_companion_admin_notices() {
 	if ( function_exists( 'get_current_screen' ) ) {
@@ -128,6 +128,9 @@ add_filter( 'jetpack_offline_mode', '__return_true' );
 
 // Load translations
 function studio_companion_load_textdomain() {
-	load_plugin_textdomain( 'studio-companion-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_muplugin_textdomain(
+		'studio-companion-plugin',
+		dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+	);
 }
 add_action( 'plugins_loaded', 'studio_companion_load_textdomain' );
