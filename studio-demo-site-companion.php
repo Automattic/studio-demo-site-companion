@@ -5,6 +5,8 @@ Plugin URI: https://github.com/Automattic/studio-demo-site-companion
 Description: Helps keep the Studio demo sites in order.
 Version: 1.0
 Author: Automattic
+Text Domain: studio-companion-plugin
+Domain Path: /languages
 */
 
 function studio_companion_admin_notices() {
@@ -17,7 +19,7 @@ function studio_companion_admin_notices() {
 	?>
 	<div class="notice notice-warning is-dismissible studio_notice">
 		<p class="studio_welcome">
-			<?php echo __( 'This preview site will be <b>deleted in 7 days from the last update</b>.' ); ?>
+			<?php echo __( 'This preview site will be <b>deleted in 7 days from the last update</b>.', 'studio-companion-plugin' ); ?>
 		</p>
 	</div>
     <style>
@@ -87,7 +89,7 @@ function studio_companion_enqueue_scripts() {
             var studioCompanionNotice = <?php echo json_encode(array(
             'description' => sprintf(
                 /* translators: %s: URL to WordPress.com hosting landing page. */
-                __( 'This is a <b>Studio</b> preview site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>' ),
+                __( 'This is a <b>Studio</b> preview site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>', 'studio-companion-plugin' ),
                 'https://wordpress.com/hosting/?utm_source=studio_demo_site&utm_medium=referral&utm_campaign=demo_sites_frontend'
             ),
         )); ?>;
@@ -123,3 +125,9 @@ add_action( 'wp_enqueue_scripts', 'studio_companion_enqueue_scripts' );
 
 // Enable Jetpack Offline mode to avoid collision with production sites
 add_filter( 'jetpack_offline_mode', '__return_true' );
+
+// Load translations
+function studio_companion_load_textdomain() {
+	load_plugin_textdomain( 'studio-companion-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'studio_companion_load_textdomain' );
