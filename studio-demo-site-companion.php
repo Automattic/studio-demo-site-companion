@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Studio Demo Site Companion Plugin
+ * Plugin Name: WordPress Studio Companion Plugin
  * Plugin URI: https://github.com/Automattic/studio-demo-site-companion
- * Description: Helps keep the Studio demo sites in order.
+ * Description: Helps keep the WordPress Studio preview sites in order.
  * Version: 1.0
  * Author: Automattic
  * Text Domain: studio-companion-plugin
@@ -89,7 +89,7 @@ function studio_companion_enqueue_scripts() {
             var studioCompanionNotice = <?php echo json_encode(array(
             'description' => sprintf(
                 /* translators: %s: URL to WordPress.com hosting landing page. */
-                __( 'This is a <b>Studio</b> preview site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>', 'studio-companion-plugin' ),
+                __( 'This is a <b>WordPress Studio</b> preview site, powered by <a href="%s" target="_blank">WordPress.com hosting  ↗</a>', 'studio-companion-plugin' ),
                 'https://wordpress.com/hosting/?utm_source=studio_demo_site&utm_medium=referral&utm_campaign=demo_sites_frontend'
             ),
         )); ?>;
