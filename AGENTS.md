@@ -1,6 +1,6 @@
 # WordPress Studio Companion Plugin
 
-A companion mu-plugin for WordPress Studio preview sites. Displays admin/frontend notices about site expiration and enables Jetpack offline mode. The entire plugin lives in a single PHP file to simplify installation as a mu-plugin — just drop one file into `mu-plugins/`.
+A companion mu-plugin for WordPress Studio preview sites. Displays admin/frontend notices about site expiration and enables Jetpack offline mode. The entire plugin lives in a single PHP file to simplify installation in the preview sites.
 
 ## Tech Stack
 
