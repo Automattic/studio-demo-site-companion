@@ -1,6 +1,6 @@
 # WordPress Studio Companion Plugin
 
-A companion mu-plugin for WordPress Studio preview sites. Displays admin/frontend notices about site expiration and enables Jetpack offline mode. The entire plugin lives in a single PHP file to simplify installation in the preview sites.
+A companion mu-plugin for WordPress Studio preview sites. Displays admin and frontend notices about site expiration and enables Jetpack offline mode. The entire plugin lives in a single PHP file to simplify installation in the preview sites.
 
 ## Tech Stack
 
@@ -50,4 +50,4 @@ There are no build, test, or lint commands. The plugin is a single PHP file load
 - **The `.pot` file is generated.** Regenerate it with the `wp i18n make-pot` command above after changing any translatable strings.
 - **Text domain is `studio-companion-plugin`** (not matching the filename). All `__()` and `esc_html__()` calls MUST use this exact text domain.
 - **`load_muplugin_textdomain`** is used instead of `load_plugin_textdomain` because this is a mu-plugin.
-- **Main branch is `trunk`**, not `main` or `master`. PRs target `trunk`.
+- **Main branch is `trunk`**.
