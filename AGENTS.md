@@ -13,7 +13,7 @@ A companion mu-plugin for WordPress Studio preview sites. Displays admin and fro
 ```text
 studio-demo-site-companion.php   Main plugin (single entry point)
 docs/localization.md             Translation process documentation
-languages/                       .pot template + compiled .mo files (19 languages)
+languages/                       .pot template + compiled .mo files
 ```
 
 ## Commands
