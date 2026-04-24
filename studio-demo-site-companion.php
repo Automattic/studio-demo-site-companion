@@ -101,6 +101,7 @@ function studio_companion_enqueue_scripts() {
             var closeButton = document.createElement("button");
 
             notice.setAttribute("id", "studio-companion-notice");
+			notice.setAttribute("class", "wp-exclude-emoji");
             notice.innerHTML = logoSvg;
 
             paragraph.innerHTML = studioCompanionNotice.description;
